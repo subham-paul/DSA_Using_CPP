@@ -2,6 +2,11 @@
 using namespace std;
 bool findNumber(int *arr, int size, int key)
 {
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
     // base case
     if (size == 0)
     {
@@ -21,7 +26,7 @@ int main()
 {
     int arr[5] = {3, 5, 6, 7, 81};
     int size = 5;
-    int key = 8;
+    int key = 7;
     bool result = findNumber(arr, size, key);
     if (result)
     {

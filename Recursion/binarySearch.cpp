@@ -41,9 +41,17 @@ int main()
 
     int arr[11] = {2, 4, 6, 10, 14, 18, 22, 38, 49, 55, 222};
     int size = 11;
-    int key = 222;
+    int key = 202;
 
-    cout << "Present or not " << binarySearch(arr, 0, size - 1, key) << endl;
+    // cout << "Present or not " << binarySearch(arr, 0, size - 1, key) << endl;
+
+    bool result = binarySearch(arr, 0, size - 1, key);
+
+    if(result){
+        cout<<"Value is present" <<endl;
+    } else {
+        cout<<"value is !present";
+    }
 
     return 0;
 }
