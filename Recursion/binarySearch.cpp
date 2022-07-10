@@ -14,8 +14,8 @@ void print(int arr[], int s, int e)
 bool binarySearch(int *arr, int s, int e, int k)
 {
 
+    print(arr, s, e);
     // base case
-
     // element not found
     if (s > e)
         return false;
@@ -28,7 +28,8 @@ bool binarySearch(int *arr, int s, int e, int k)
 
     if (arr[mid] < k)
     {
-        return binarySearch(arr, mid + 1, e, k);
+        bool ans = binarySearch(arr, mid + 1, e, k);
+        return ans;
     }
     else
     {
@@ -41,9 +42,7 @@ int main()
 
     int arr[11] = {2, 4, 6, 10, 14, 18, 22, 38, 49, 55, 222};
     int size = 11;
-    int key = 202;
-
-    // cout << "Present or not " << binarySearch(arr, 0, size - 1, key) << endl;
+    int key = 38;
 
     bool result = binarySearch(arr, 0, size - 1, key);
 
